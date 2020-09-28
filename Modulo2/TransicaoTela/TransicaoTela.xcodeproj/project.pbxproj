@@ -16,6 +16,7 @@
 		B28B429F251C03E9007DF763 /* TransicaoTelaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B429E251C03E9007DF763 /* TransicaoTelaTests.swift */; };
 		B28B42AA251C03E9007DF763 /* TransicaoTelaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B42A9251C03E9007DF763 /* TransicaoTelaUITests.swift */; };
 		B28B42BE251C12B8007DF763 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B42BD251C12B8007DF763 /* SecondVC.swift */; };
+		B294F5F5251EB13D006DA580 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B294F5F4251EB13D006DA580 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B28B42A9251C03E9007DF763 /* TransicaoTelaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransicaoTelaUITests.swift; sourceTree = "<group>"; };
 		B28B42AB251C03E9007DF763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B28B42BD251C12B8007DF763 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		B294F5F4251EB13D006DA580 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				B28B428B251C03E5007DF763 /* FirstVC.swift */,
 				B28B42BD251C12B8007DF763 /* SecondVC.swift */,
+				B294F5F4251EB13D006DA580 /* DetailVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B294F5F5251EB13D006DA580 /* DetailVC.swift in Sources */,
 				B28B428C251C03E5007DF763 /* FirstVC.swift in Sources */,
 				B28B4288251C03E5007DF763 /* AppDelegate.swift in Sources */,
 				B28B42BE251C12B8007DF763 /* SecondVC.swift in Sources */,
