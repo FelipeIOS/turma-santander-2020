@@ -7,8 +7,15 @@
 
 import UIKit
 
-class SecondVC: UIViewController {
+class CadastroEndereco: UIViewController {
 
+    @IBOutlet weak var ruaTextField: UITextField!
+    @IBOutlet weak var complementoTextField: UITextField!
+    @IBOutlet weak var cidadeTextField: UITextField!
+    @IBOutlet weak var bairroTextField: UITextField!
+    @IBOutlet weak var estadoTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
