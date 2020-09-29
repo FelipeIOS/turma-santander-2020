@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--FirstVC-->
+        <!--Cadastro UsuarioVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="FirstVC" customModule="TransicaoTela" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="CadastroUsuarioVC" customModule="TransicaoTela" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="tappedLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="irb-TM-Isk"/>
+                                    <action selector="tappedCadastrarButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k4L-vf-te1"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QbC-n3-5ZR">
@@ -58,7 +58,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="tappedLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vom-fI-oA2"/>
+                                    <action selector="cadastrarEndereco:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C3G-Yx-agU"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yz-xD-l23">
@@ -82,7 +82,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="cidade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RpU-Du-GQ6">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="bairro" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RpU-Du-GQ6">
                                                 <rect key="frame" x="0.0" y="128" width="374" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -123,13 +123,25 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bairroTextField" destination="RpU-Du-GQ6" id="gbk-KR-fK0"/>
+                        <outlet property="cadastrarButton" destination="qFs-lD-QbU" id="FaD-sl-FBc"/>
+                        <outlet property="cidadeTextField" destination="0Hb-KB-TIy" id="ahx-hu-yt6"/>
+                        <outlet property="complementoTextField" destination="TuW-ZN-Qpq" id="nKf-3B-r8x"/>
+                        <outlet property="cpfTextField" destination="SOR-nr-nj4" id="EKF-Yf-nCe"/>
+                        <outlet property="dataTextField" destination="B8V-gV-k47" id="zz0-sT-CoY"/>
+                        <outlet property="emailTextField" destination="70P-kJ-pt2" id="Xgo-bZ-JM2"/>
+                        <outlet property="enderecoButton" destination="GoI-A0-egy" id="Xxw-UC-obN"/>
+                        <outlet property="enderecoView" destination="9Yz-xD-l23" id="LxR-m6-Zt0"/>
+                        <outlet property="estadoTextField" destination="efK-JQ-cas" id="HaG-YU-m6h"/>
+                        <outlet property="nomeTextField" destination="1EQ-Y4-bAC" id="G8l-tl-Nvl"/>
+                        <outlet property="ruaTextField" destination="9sf-e1-f6t" id="X4O-V2-pcN"/>
                         <segue destination="22m-Y7-1mi" kind="presentation" identifier="DetailVC" id="21m-bc-0Ml"/>
-                        <segue destination="94X-4p-MO6" kind="presentation" id="g2N-KJ-IoQ"/>
+                        <segue destination="94X-4p-MO6" kind="presentation" identifier="CadastroEnderecoVC" id="g2N-KJ-IoQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="258" y="-46"/>
+            <point key="canvasLocation" x="-71" y="-46"/>
         </scene>
         <!--Detail-->
         <scene sceneID="cpS-pc-vxX">
@@ -139,10 +151,10 @@
             </objects>
             <point key="canvasLocation" x="607" y="435"/>
         </scene>
-        <!--Cadastro Endereco-->
+        <!--Cadastro EnderecoVC-->
         <scene sceneID="QL7-XL-9fx">
             <objects>
-                <viewController storyboardIdentifier="SecondVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="94X-4p-MO6" customClass="CadastroEndereco" customModule="TransicaoTela" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="94X-4p-MO6" customClass="CadastroEnderecoVC" customModule="TransicaoTela" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bgI-XY-eos">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,30 +164,36 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="rua" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n09-SH-31l">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="complemento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPX-dr-FD2">
                                         <rect key="frame" x="0.0" y="42" width="374" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="cidade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c92-Eb-Xrl">
                                         <rect key="frame" x="0.0" y="84" width="374" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="bairro" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UYu-lP-Eeu">
                                         <rect key="frame" x="0.0" y="126" width="374" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hS9-m8-km3">
                                         <rect key="frame" x="0.0" y="168" width="374" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereço" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRh-It-IXI">
                                 <rect key="frame" x="171" y="71" width="72.5" height="20.5"/>
@@ -189,9 +207,6 @@
                                 <state key="normal" title="Cadastrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="tappedLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNv-6n-XzA"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRY-sw-5ZD">
                                 <rect key="frame" x="353" y="44" width="41" height="30"/>
@@ -227,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syo-NZ-qMJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055" y="-46"/>
+            <point key="canvasLocation" x="730" y="-46"/>
         </scene>
     </scenes>
     <resources>

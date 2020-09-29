@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		B28B4288251C03E5007DF763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B4287251C03E5007DF763 /* AppDelegate.swift */; };
 		B28B428A251C03E5007DF763 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B4289251C03E5007DF763 /* SceneDelegate.swift */; };
-		B28B428C251C03E5007DF763 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B428B251C03E5007DF763 /* FirstVC.swift */; };
+		B28B428C251C03E5007DF763 /* CadastroUsuarioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B428B251C03E5007DF763 /* CadastroUsuarioVC.swift */; };
 		B28B428F251C03E5007DF763 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28B428D251C03E5007DF763 /* Main.storyboard */; };
 		B28B4291251C03E9007DF763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B28B4290251C03E9007DF763 /* Assets.xcassets */; };
 		B28B4294251C03E9007DF763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28B4292251C03E9007DF763 /* LaunchScreen.storyboard */; };
 		B28B429F251C03E9007DF763 /* TransicaoTelaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B429E251C03E9007DF763 /* TransicaoTelaTests.swift */; };
 		B28B42AA251C03E9007DF763 /* TransicaoTelaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B42A9251C03E9007DF763 /* TransicaoTelaUITests.swift */; };
-		B28B42BE251C12B8007DF763 /* CadastroEndereco.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B42BD251C12B8007DF763 /* CadastroEndereco.swift */; };
+		B28B42BE251C12B8007DF763 /* CadastroEnderecoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B42BD251C12B8007DF763 /* CadastroEnderecoVC.swift */; };
 		B294F5F5251EB13D006DA580 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B294F5F4251EB13D006DA580 /* DetailVC.swift */; };
 		B2A0830025229A9700C31814 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A082FF25229A9700C31814 /* Detail.storyboard */; };
 /* End PBXBuildFile section */
@@ -41,7 +41,7 @@
 		B28B4284251C03E5007DF763 /* TransicaoTela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransicaoTela.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28B4287251C03E5007DF763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B28B4289251C03E5007DF763 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B28B428B251C03E5007DF763 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		B28B428B251C03E5007DF763 /* CadastroUsuarioVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroUsuarioVC.swift; sourceTree = "<group>"; };
 		B28B428E251C03E5007DF763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B28B4290251C03E9007DF763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B28B4293251C03E9007DF763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		B28B42A5251C03E9007DF763 /* TransicaoTelaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransicaoTelaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28B42A9251C03E9007DF763 /* TransicaoTelaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransicaoTelaUITests.swift; sourceTree = "<group>"; };
 		B28B42AB251C03E9007DF763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B28B42BD251C12B8007DF763 /* CadastroEndereco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroEndereco.swift; sourceTree = "<group>"; };
+		B28B42BD251C12B8007DF763 /* CadastroEnderecoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroEnderecoVC.swift; sourceTree = "<group>"; };
 		B294F5F4251EB13D006DA580 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		B2A082FF25229A9700C31814 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,8 +138,8 @@
 		B28B42C2251C12C1007DF763 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B28B428B251C03E5007DF763 /* FirstVC.swift */,
-				B28B42BD251C12B8007DF763 /* CadastroEndereco.swift */,
+				B28B428B251C03E5007DF763 /* CadastroUsuarioVC.swift */,
+				B28B42BD251C12B8007DF763 /* CadastroEnderecoVC.swift */,
 				B294F5F4251EB13D006DA580 /* DetailVC.swift */,
 			);
 			path = Views;
@@ -277,9 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B294F5F5251EB13D006DA580 /* DetailVC.swift in Sources */,
-				B28B428C251C03E5007DF763 /* FirstVC.swift in Sources */,
+				B28B428C251C03E5007DF763 /* CadastroUsuarioVC.swift in Sources */,
 				B28B4288251C03E5007DF763 /* AppDelegate.swift in Sources */,
-				B28B42BE251C12B8007DF763 /* CadastroEndereco.swift in Sources */,
+				B28B42BE251C12B8007DF763 /* CadastroEnderecoVC.swift in Sources */,
 				B28B428A251C03E5007DF763 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

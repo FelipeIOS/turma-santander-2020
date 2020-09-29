@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CadastroEndereco: UIViewController {
+class CadastroEnderecoVC: UIViewController {
 
     @IBOutlet weak var ruaTextField: UITextField!
     @IBOutlet weak var complementoTextField: UITextField!
