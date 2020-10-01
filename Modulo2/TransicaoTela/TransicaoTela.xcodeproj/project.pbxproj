@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B22D8B7D25253F36002EA2BC /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22D8B7C25253F36002EA2BC /* Usuario.swift */; };
+		B22D8B8525254182002EA2BC /* Endereco.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22D8B8425254182002EA2BC /* Endereco.swift */; };
 		B28B4288251C03E5007DF763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B4287251C03E5007DF763 /* AppDelegate.swift */; };
 		B28B428A251C03E5007DF763 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B4289251C03E5007DF763 /* SceneDelegate.swift */; };
 		B28B428C251C03E5007DF763 /* CadastroUsuarioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B428B251C03E5007DF763 /* CadastroUsuarioVC.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B22D8B7C25253F36002EA2BC /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		B22D8B8425254182002EA2BC /* Endereco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endereco.swift; sourceTree = "<group>"; };
 		B28B4284251C03E5007DF763 /* TransicaoTela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransicaoTela.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28B4287251C03E5007DF763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B28B4289251C03E5007DF763 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B22D8B7B25253F0B002EA2BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B22D8B7C25253F36002EA2BC /* Usuario.swift */,
+				B22D8B8425254182002EA2BC /* Endereco.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B28B427B251C03E5007DF763 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +118,7 @@
 		B28B4286251C03E5007DF763 /* TransicaoTela */ = {
 			isa = PBXGroup;
 			children = (
+				B22D8B7B25253F0B002EA2BC /* Model */,
 				B28B42C2251C12C1007DF763 /* Views */,
 				B28B4287251C03E5007DF763 /* AppDelegate.swift */,
 				B28B4289251C03E5007DF763 /* SceneDelegate.swift */,
@@ -278,7 +292,9 @@
 			files = (
 				B294F5F5251EB13D006DA580 /* DetailVC.swift in Sources */,
 				B28B428C251C03E5007DF763 /* CadastroUsuarioVC.swift in Sources */,
+				B22D8B7D25253F36002EA2BC /* Usuario.swift in Sources */,
 				B28B4288251C03E5007DF763 /* AppDelegate.swift in Sources */,
+				B22D8B8525254182002EA2BC /* Endereco.swift in Sources */,
 				B28B42BE251C12B8007DF763 /* CadastroEnderecoVC.swift in Sources */,
 				B28B428A251C03E5007DF763 /* SceneDelegate.swift in Sources */,
 			);

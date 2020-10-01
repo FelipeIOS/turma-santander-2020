@@ -18,7 +18,7 @@ class CadastroUsuarioVC: UIViewController {
     
     
     // MARK: IBOutlets endereço
-
+    
     @IBOutlet weak var ruaTextField: UITextField!
     @IBOutlet weak var complementoTextField: UITextField!
     @IBOutlet weak var cidadeTextField: UITextField!
@@ -29,10 +29,14 @@ class CadastroUsuarioVC: UIViewController {
     @IBOutlet weak var cadastrarButton: UIButton!
     
     
+    var isRegisterValid: Bool = false
+    
+    var usuario: Usuario?
+    
     
     // MARK: View Layout
     fileprivate func configScreen() {
-       
+        
         self.enderecoView.isHidden = true
         self.enderecoButton.layer.cornerRadius = 4
         self.cadastrarButton.layer.cornerRadius = 4
@@ -45,18 +49,29 @@ class CadastroUsuarioVC: UIViewController {
         self.emailTextField.delegate = self
         self.dataTextField.delegate = self
         
-//        self.ruaTextField.delegate = self
-//        self.complementoTextField.delegate = self
-//        self.cidadeTextField.delegate =  self
-//        self.bairroTextField.delegate = self
-//        self.estadoTextField.delegate = self
-
-        
         self.ruaTextField.isUserInteractionEnabled = false
         self.complementoTextField.isUserInteractionEnabled = false
         self.cidadeTextField.isUserInteractionEnabled =  false
         self.bairroTextField.isUserInteractionEnabled = false
         self.estadoTextField.isUserInteractionEnabled = false
+    }
+    
+    
+    fileprivate func  validateFields(textField:UITextField){
+        
+        if let value = textField.text {
+            
+            if value.isEmpty {
+                self.isRegisterValid = false
+            }else{
+                self.isRegisterValid = true
+            }
+            
+        }else {
+            self.isRegisterValid = false
+        }
+        
+        print("=======validateFields=====  \(self.isRegisterValid)")
     }
     
     
@@ -83,26 +98,65 @@ class CadastroUsuarioVC: UIViewController {
         print("viewWillAppear first")
     }
     
-    
-    
     @IBAction func cadastrarEndereco(_ sender: UIButton) {
-    
-        self.performSegue(withIdentifier: "CadastroEnderecoVC", sender: nil)
-    
+        
+        if self.nomeTextField.text?.isEmpty == true || self.cpfTextField.text?.isEmpty == true || self.emailTextField.text?.isEmpty == true || self.dataTextField.text?.isEmpty == true {
+            
+            print("tem campo que precisa ser preenchido")
+            
+            
+        }else{
+            
+            //            let cpf: Int = Int(self.cpfTextField.text ?? "0") ?? 0
+            let cpf2: Int? = Int(self.cpfTextField.text ?? "0")
+            
+            
+            self.usuario = Usuario(nome: self.nomeTextField.text, cpf: cpf2 , email: self.emailTextField.text, data: self.dataTextField.text, endereco: nil)
+            self.performSegue(withIdentifier: "CadastroEnderecoVC", sender: nil)
+        }
+        
     }
     
     @IBAction func tappedCadastrarButton(_ sender: UIButton) {
-
-       
+        
         self.performSegue(withIdentifier: "DetailVC", sender: "Felipe")
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let vc: DetailVC? = segue.destination as? DetailVC
-        vc?.view.backgroundColor = .red
-        vc?.myLabel.text = sender as? String
+        
+        if segue.identifier == "CadastroEnderecoVC" {
+            
+            let vc: CadastroEnderecoVC? = segue.destination as? CadastroEnderecoVC
+            vc?.delegate = self
+            
+        }else{
+            
+            let vc: DetailVC? = segue.destination as? DetailVC
+            vc?.view.backgroundColor = .red
+            vc?.myLabel.text  = self.usuario?.nome
+            
+        }
+
+        
+    }
+}
+
+extension CadastroUsuarioVC: CadastroEnderecoVCProtocol {
+    
+
+    
+    func successRegisterAddress(address: Endereco) {
+        
+        self.enderecoView.isHidden = false
+        self.usuario?.endereco = address
+        
+        self.ruaTextField.text = self.usuario?.endereco?.rua
+        self.complementoTextField.text = self.usuario?.endereco?.complemento
+        self.cidadeTextField.text = self.usuario?.endereco?.cidade
+        self.bairroTextField.text = self.usuario?.endereco?.bairro
+        self.estadoTextField.text = self.usuario?.endereco?.estado
         
     }
 }
@@ -110,6 +164,7 @@ class CadastroUsuarioVC: UIViewController {
 extension CadastroUsuarioVC: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         
         switch textField {
         case self.nomeTextField:
@@ -124,6 +179,10 @@ extension CadastroUsuarioVC: UITextFieldDelegate {
         return true
     }
     
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.validateFields(textField: textField)
+    }
 }
 
 

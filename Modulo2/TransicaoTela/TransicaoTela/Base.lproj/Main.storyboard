@@ -207,6 +207,9 @@
                                 <state key="normal" title="Cadastrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="clicouCadastrarEndereco:" destination="94X-4p-MO6" eventType="touchUpInside" id="JEs-38-Xzz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRY-sw-5ZD">
                                 <rect key="frame" x="353" y="44" width="41" height="30"/>
